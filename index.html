@@ -44,12 +44,12 @@ async function generateHuwid() {
     webgl.renderer || '',
     webgl.vendor || ''
   ].join('||');
-  return await hashString(data);
+  const huwid = await hashString(data);
+  
+  // Retorna JSON diretamente
+  document.body.textContent = JSON.stringify({ huwid: huwid });
 }
-
-generateHuwid().then(id => {
-  document.body.textContent = JSON.stringify({huwid: id});
-});
+generateHuwid();
 </script>
 </body>
 </html>
