@@ -47,7 +47,7 @@ async function generateHuwid() {
   const huwid = await hashString(data);
   
   // Retorna JSON diretamente
-  document.body.textContent = JSON.stringify({ huwid: huwid });
+  document.body.textContent = JSON.stringify({ VZ: huwid });
 }
 generateHuwid();
 </script>
